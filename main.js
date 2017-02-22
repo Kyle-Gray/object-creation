@@ -27,7 +27,10 @@ let languages = {
 };
 
 //Write task #1 code below
+var moreLanguages = Object.assign(languages, {isolates: [ 'Korean', 'Basque' ],
+Germanic: [ 'Swedish', 'Danish', 'English' ]});
 
+console.log(moreLanguages);
 
 
 
@@ -57,8 +60,7 @@ function Husky() {
 }
 
 // TODO: Use Object.create() in order to extend the superclass with the subclass
-//write code here
-
+Husky.prototype = Object.create(Dog.prototype);
 var fido = new Husky();
 
 console.log('Is fido an instance of Husky?', fido instanceof Husky);// should print true
